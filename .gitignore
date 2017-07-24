@@ -1,1 +1,3 @@
 .vscode/
+lib/*.pyc
+__main__.py
