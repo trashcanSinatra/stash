@@ -28,9 +28,7 @@ class Stash:
             raise ValueError("Timeout Function is not a valid function.")
         
         if key in self.cache:
-            oldRecord = self.cache[key]
-            timer = oldRecord['timer']
-            timer.cancel()
+            self.cache[key]['timer'].cancel()
         else:
             self.size += 1
         
